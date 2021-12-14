@@ -45,13 +45,17 @@
         </tr>
     </thead>
     <tbody>
+
+
 @foreach (var item in Model) {
+
+
         <tr>          
             <td>
                 @item.PondID
             </td>
             <td>
-                @item.Start_date
+                @item.Start_date.ToString("yyyy/MM/dd")
             </td>
             <td>
                 @item.Initial_population
@@ -61,7 +65,7 @@
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.Estimated_end_date)
+                @item.Estimated_end_date.ToString("yyyy/MM/dd")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Estimated_harvest_average_weight)

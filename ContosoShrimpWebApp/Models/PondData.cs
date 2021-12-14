@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
 namespace ContosoShrimpWebApp.Models
@@ -12,6 +13,7 @@ namespace ContosoShrimpWebApp.Models
         [JsonProperty(PropertyName = "pondID")]
         public int PondID { get; set; }
 
+        
         [JsonProperty(PropertyName = "start_date")] //working
         public DateTimeOffset Start_date { get; set; }
 
@@ -19,8 +21,9 @@ namespace ContosoShrimpWebApp.Models
         public int Initial_population { get; set; }
 
         [JsonProperty(PropertyName = "initial_average_weight")]
-        public int Initial_average_weight { get; set; } 
+        public int Initial_average_weight { get; set; }
 
+        
         [JsonProperty(PropertyName = "estimated_end_date")]
         public DateTimeOffset Estimated_end_date { get; set; }
 
