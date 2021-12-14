@@ -56,6 +56,7 @@ namespace ContosoShrimpWebApp.Controllers
                     var PondResponse = Res.Content.ReadAsStringAsync().Result;
                     //Deserializing the response recieved from web api and storing into the Pondlist
                     PondInfo = JsonConvert.DeserializeObject<List<PondData>>(PondResponse); // this is where it goes wrong!
+                    
 
                 }
                 //returning the Pond list to view
@@ -148,6 +149,8 @@ namespace ContosoShrimpWebApp.Controllers
             }
             return View("Delete", model);
         }
+
+     
 
         //[HttpPost]
         //public ActionResult Delete(PondData pond)

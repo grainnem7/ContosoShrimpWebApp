@@ -8,7 +8,7 @@
 <h1>Cultivations</h1>
 
 <p>
-    <a asp-action="CCreate">Create New</a>
+    <a asp-action="CCreate" value="Delete" class="btn btn-primary">Add New</a>
 </p>
 <table class="styled-table">
     <thead>
@@ -57,7 +57,6 @@
             </td>
             <td>
                 <a asp-action="CEdit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="CDetails" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="CDelete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
