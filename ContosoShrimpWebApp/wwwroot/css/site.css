@@ -56,11 +56,11 @@ body {
 
 input[type=date] {
     border: none;
-    width: 20.5rem;
+    width: 17.0rem;
     background: white;
     color: #212529;
     padding: 0.7rem;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
 }
 
 @import "compass/css3";
