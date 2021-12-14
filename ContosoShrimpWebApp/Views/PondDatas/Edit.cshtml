@@ -1,0 +1,70 @@
+﻿@model PondData
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>PondData</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<input type="hidden" asp-for="Id" />*@
+            <div class="form-group">
+                <label asp-for="PondID" class="control-label">Pond ID</label>
+                <input asp-for="PondID" class="form-control" />
+                <span asp-validation-for="PondID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Start_date" class="control-label">Start Date</label>
+                <input asp-for="Start_date" class="form-control" />
+                <span asp-validation-for="Start_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Initial_population" class="control-label">Initial Population</label>
+                <input asp-for="Initial_population" class="form-control" />
+                <span asp-validation-for="Initial_population" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Initial_average_weight" class="control-label">Initial Average Weight</label>
+                <input asp-for="Initial_average_weight" class="form-control" />
+                <span asp-validation-for="Initial_average_weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estimated_end_date" class="control-label">stimated End Date</label>
+                <input asp-for="Estimated_end_date" class="form-control" />
+                <span asp-validation-for="Estimated_end_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estimated_harvest_average_weight" class="control-label"> Estimated Harvest Average Weight</label>
+                <input asp-for="Estimated_harvest_average_weight" class="form-control" />
+                <span asp-validation-for="Estimated_harvest_average_weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Estimated_survival" class="control-label">Estimated Survival</label>
+                <input asp-for="Estimated_survival" class="form-control" />
+                <span asp-validation-for="Estimated_survival" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Food_type" class="control-label">Food Type</label>
+                <input asp-for="Food_type" class="form-control" />
+                <span asp-validation-for="Food_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ShowAll">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

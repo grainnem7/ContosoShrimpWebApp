@@ -1,0 +1,107 @@
+﻿@model PondData
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<div>
+    <h3>Pond Successfully Deleted</h3>
+    <a asp-action="ShowAll">Back to List</a>
+</div>
+
+
+
+@*
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<input type="hidden" asp-for="ID" />
+             <div class="form-group">
+                <label asp-for="ID" class="control-label"></label>
+                <input asp-for="ID" class="form-control" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>   
+            @*<div class="form-group">
+                <label asp-for="pondID" class="control-label"></label>
+                <input asp-for="pondID" class="form-control" />
+                <span asp-validation-for="pondID" class="text-danger"></span>
+            </div> *@               
+ @*           <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+@*</div>*@*@*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+@*<div>
+    <h4>PondData</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.pondID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.pondID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.start_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.start_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.initial_population)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.initial_population)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.initial_average_weight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.initial_average_weight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.estimated_end_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.estimated_end_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.estimated_harvest_average_weight)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.estimated_harvest_average_weight)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.estimated_survival)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.estimated_survival)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.food_type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.food_type)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>*@

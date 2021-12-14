@@ -1,0 +1,82 @@
+﻿@model IEnumerable<ContosoShrimpWebApp.Models.PondData>
+@{
+    ViewData["Title"] = "ShowAll";
+}
+
+<h1>All Ponds</h1>
+
+<h1>
+    
+
+</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Pond ID
+            </th>
+            <th>
+                Start Date
+            </th>
+            <th>
+                Initial Population
+            </th>
+            <th>
+               Initial Average Weight
+            </th>
+            <th>
+               Estimated End Date
+            </th>
+            <th>
+                Estimated Harvest Average Weight
+            </th>
+            <th>
+                Estimated Survival
+            </th>
+            <th>
+                Food Type
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>          
+            <td>
+                @item.PondID
+            </td>
+            <td>
+                @item.Start_date
+            </td>
+            <td>
+                @item.Initial_population
+            </td>
+            <td>
+                @item.Initial_average_weight
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Estimated_end_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estimated_harvest_average_weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estimated_survival)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Food_type)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |                
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

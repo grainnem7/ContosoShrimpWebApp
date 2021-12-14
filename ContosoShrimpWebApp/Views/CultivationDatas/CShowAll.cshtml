@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ContosoShrimpWebApp.Models.CultivationData>
+
+@{
+    ViewData["Title"] = "CShowAll";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cultivations</h1>
+
+<p>
+    <a asp-action="CCreate">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Cultivation ID
+            </th>
+            <th>
+                Estimated Length
+            </th>
+            <th>
+                Genetic Origin
+            </th>
+            <th>
+                Number Of Seeds
+            </th>
+            <th>
+                Estimated Survival
+            </th>
+            <th>
+                Estimated Kilograms Produced
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CultivationID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estimated_Length)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genetic_Origin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number_of_seeds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estimated_survival)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Est_kg_produced)
+            </td>
+            <td>
+                <a asp-action="CEdit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="CDetails" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="CDelete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
