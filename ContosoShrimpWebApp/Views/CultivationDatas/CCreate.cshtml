@@ -9,8 +9,11 @@
 
 <h4>Cultivation Data</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+
+
+<div class = "center">
+    
+    <div class = "center">
         <form asp-action="CCreate">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             @*<div class="form-group">
@@ -19,35 +22,41 @@
                 <span asp-validation-for="Id" class="text-danger"></span>
             </div>*@
             <div class="form-group">
-                <label asp-for="CultivationID" class="control-label">Cultivation ID</label>
+                <label asp-for="CultivationID" class="floatLabel">Cultivation ID</label>
                 <input asp-for="CultivationID" class="form-control" />
                 <span asp-validation-for="CultivationID" class="text-danger"></span>
             </div>
+            <br>
             <div class="form-group">
-                <label asp-for="Estimated_Length" class="control-label">Estimated Length</label>
+                <label asp-for="Estimated_Length" class="floatLabel">Estimated Length</label>
                 <input asp-for="Estimated_Length" class="form-control" />
                 <span asp-validation-for="Estimated_Length" class="text-danger"></span>
             </div>
+             <br>
             <div class="form-group">
-                <label asp-for="Genetic_Origin" class="control-label">Genetic Origin</label>
+                <label asp-for="Genetic_Origin" class="floatLabel">Genetic Origin</label>
                 <input asp-for="Genetic_Origin" class="form-control" />
                 <span asp-validation-for="Genetic_Origin" class="text-danger"></span>
             </div>
+             <br>
             <div class="form-group">
-                <label asp-for="Number_of_seeds" class="control-label">Number Of Seeds</label>
+                <label asp-for="Number_of_seeds" class="floatLabel">Number Of Seeds</label>
                 <input asp-for="Number_of_seeds" class="form-control" />
                 <span asp-validation-for="Number_of_seeds" class="text-danger"></span>
             </div>
+             <br>
             <div class="form-group">
-                <label asp-for="Estimated_survival" class="control-label">Estimated Survival</label>
+                <label asp-for="Estimated_survival" class="floatLabel">Estimated Survival</label>
                 <input asp-for="Estimated_survival" class="form-control" />
                 <span asp-validation-for="Estimated_survival" class="text-danger"></span>
             </div>
+             <br>
             <div class="form-group">
-                <label asp-for="Est_kg_produced" class="control-label">Estimated Kilograms Produced</label>
+                <label asp-for="Est_kg_produced" class="floatLabel">Estimated Kilograms Produced</label>
                 <input asp-for="Est_kg_produced" class="form-control" />
                 <span asp-validation-for="Est_kg_produced" class="text-danger"></span>
             </div>
+             <br>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

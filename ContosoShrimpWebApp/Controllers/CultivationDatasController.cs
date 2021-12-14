@@ -148,5 +148,20 @@ namespace ContosoShrimpWebApp.Controllers
             }
             return View("CDelete", model);
         }
+
+        public ActionResult CDeleteQuestion(string id)
+        {
+            client.DefaultRequestHeaders.Accept.Clear();
+
+
+            CultivationData model = new CultivationData();
+            HttpResponseMessage response = client.GetAsync(client.BaseAddress + "api/pondModels/" + id).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                string data = response.Content.ReadAsStringAsync().Result;
+                model = JsonConvert.DeserializeObject<CultivationData>(data);
+            }
+            return View("CDeleteQuestion", model);
+        }
     }
 }
